@@ -39,9 +39,21 @@
    3. 右M 修改了但没放到暂存区
    4. 左M 修改切放入了暂存区
 10. 查看文件差异：git diff
-    1. 
+    1. 无参数：git diff  查看修改后还没有暂存的起来的变化内容
+    1. Staged: git diff --staged 查看已经暂存的将要添加到下次提交里的内容
+11. 回顾提交历史： git log
+    1. git log -p : 显示每次提交的内容差异。 （-p for patch)
+    2. git log --stat：显示每次提交的简略的统计信息
+    3. git log --pretty={format}: 用某种显示格式进行显示。     e.g. --pretty=oneline
+12. 撤销修改操作：
+    1. git commit --amend：订正最近一次commit提交并覆盖，并将当时暂存区修改提交
+    2. git checkout -- file：取消在工作区的修改
+    3. git reset file或者--soft/--hard/--mixed: 取消暂存区的修改以及仓库版本回退
 
-
+13. 查看远程仓库：git remote [-v查看URL]
+14. 从远程仓库获取数据：
+    1. git fetch: 访问远程仓库，拉取还没有的数据
+    2. Git pull: 
 
 
 
